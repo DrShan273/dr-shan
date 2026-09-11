@@ -12,6 +12,7 @@ import {
   HeartPulse
 } from 'lucide-react';
 import { DOCTOR_PROFILE } from '../data/clinicalData';
+import portraitPhoto from '../assets/dr-muhammad-shan.jpg';
 
 interface HeroProps {
   onOpenVCard: () => void;
@@ -132,9 +133,9 @@ export const Hero: React.FC<HeroProps> = ({ onOpenVCard, onOpenConsult }) => {
                 <div className="relative">
                   <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl bg-gradient-to-br from-teal-600 via-teal-700 to-slate-800 flex items-center justify-center text-white shadow-md shadow-teal-700/30 overflow-hidden">
                     <img 
-                      src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=400&q=80" 
+                      src={portraitPhoto}
                       alt="Dr. Muhammad Shan - Medical Officer BVH" 
-                      className="w-full h-full object-cover object-top"
+                      className="w-full h-full object-cover object-[center_20%]"
                     />
                   </div>
                   <div className="absolute -bottom-1.5 -right-1.5 w-7 h-7 rounded-full bg-emerald-500 border-2 border-white flex items-center justify-center text-white shadow-sm" title="Active on Hospital Roster">
