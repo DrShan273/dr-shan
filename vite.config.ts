@@ -3,8 +3,18 @@ import react from '@vitejs/plugin-react';
 import path from 'path';
 import {defineConfig} from 'vite';
 
+function pagesBase(): string {
+  const fromEnv = process.env.BASE_PATH;
+  if (fromEnv) {
+    return fromEnv.endsWith('/') ? fromEnv : `${fromEnv}/`;
+  }
+
+  return '/';
+}
+
 export default defineConfig(() => {
   return {
+    base: pagesBase(),
     plugins: [react(), tailwindcss()],
     resolve: {
       alias: {
